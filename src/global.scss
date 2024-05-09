@@ -1,0 +1,13 @@
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+}

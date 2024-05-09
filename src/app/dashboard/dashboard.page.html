@@ -1,0 +1,492 @@
+<app-navbar></app-navbar>
+<section *ngIf="currentWeatherData || threeHourFiveDayForeCast">
+    <article>
+        <img [src]="'https://openweathermap.org/img/wn/' + currentWeatherData().weather[0].icon + '@4x.png'"
+            [alt]="currentWeatherData().weather[0].description">
+            <h2>{{currentWeatherData().main.temp.toFixed(0)}}&#176;</h2>
+        <div>
+            <h4>{{currentWeatherData().name}}</h4>
+            <h5>/</h5>
+            <h4>{{currentWeatherData().weather[0].main}}</h4>
+            <h5>/</h5>
+            <h4>{{currentWeatherData().weather[0].description}}</h4>
+        </div>
+    </article>
+    <article *ngFor="let threeHourFiveDayForeCast of threeHourFiveDayForeCast()">
+        <div *ngIf="threeHourFiveDayForeCast">
+            <h3>{{threeHourFiveDayForeCast.list[0].dt * 1000 | date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[0].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[0].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[0].main.temp}} &#176;</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[0].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[1].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[1].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[1].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[1].main.temp+ ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[1].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[2].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[2].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[2].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[2].main.temp+ ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[2].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[3].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[3].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[3].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[3].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[3].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[4].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[4].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[4].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[4].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[4].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[5].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[5].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[5].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[5].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[5].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[6].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[6].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[6].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[6].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[6].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[7].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[7].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[7].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[7].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[7].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[8].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[8].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[8].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[8].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[8].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[9].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[9].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[9].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[9].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[9].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[10].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[10].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[10].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[10].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[10].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[11].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[11].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[11].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[11].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[11].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[12].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[12].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[12].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[12].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[12].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[13].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[13].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[13].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[13].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[13].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[14].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[14].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[14].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[14].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[14].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[15].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[15].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[15].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[15].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[15].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[16].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[16].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[16].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[16].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[16].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[17].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[17].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[17].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[17].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[17].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[18].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[18].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[18].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[18].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[18].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[19].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[19].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[19].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[19].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[19].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[20].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[20].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[20].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[20].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[20].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[21].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[21].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[21].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[21].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[21].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[22].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[22].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[22].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[22].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[22].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[23].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[23].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[23].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[23].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[23].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[24].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[24].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[24].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[24].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[24].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[25].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[25].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[25].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[25].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[25].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[26].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[26].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[26].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[26].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[26].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[27].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[27].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[27].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[27].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[27].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[28].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[28].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[28].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[28].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[28].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[29].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[29].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[29].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[29].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[29].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[30].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[30].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[30].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[30].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[30].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[31].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[31].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[31].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[31].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[31].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[32].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[32].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[32].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[32].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[32].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[33].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[33].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[33].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[33].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[33].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[34].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[34].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[34].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[34].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[34].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[35].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[35].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[35].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[35].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[35].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[36].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[36].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[36].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[36].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[36].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[37].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[37].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[37].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[37].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[37].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[38].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[38].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[38].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[38].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[38].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+        <div>
+            <h3>{{threeHourFiveDayForeCast.list[39].dt * 1000| date:'MMM d'}}</h3>
+            <img [src]="'https://openweathermap.org/img/wn/' + threeHourFiveDayForeCast.list[39].weather[0].icon + '@4x.png'"
+                [alt]="threeHourFiveDayForeCast.list[39].weather[0].description">
+            <span>
+                <h5>{{threeHourFiveDayForeCast.list[39].main.temp + ' &#176;'}}</h5>
+                <h3>|</h3>
+                <h5>{{threeHourFiveDayForeCast.list[39].dt * 1000 | date:'shortTime'}}</h5>
+            </span>
+        </div>
+    </article>
+    <article>
+        <span>
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>Latitude - {{currentWeatherData().coord.lat}}</h4>
+        </span>
+        <span>
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>Longitude - {{currentWeatherData().coord.lon}}</h4>
+        </span>
+        <span>
+            <i class="fa-solid fa-wind"></i>
+            <h4>{{currentWeatherData().wind.deg + ' meteorological degrees'}}</h4>
+        </span>
+        <span>
+            <i class="fa-solid fa-sun"></i>
+            <h4>Sunrise - {{currentWeatherData().sys.sunrise * 1000 | date: 'shortTime'}}</h4>
+        </span>
+        <span>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h4>Sunset - {{currentWeatherData().sys.sunset * 1000 | date: 'shortTime'}}</h4>
+        </span>
+        <span>
+            <i class="fa-solid fa-map-pin"></i>
+            <h4>{{currentWeatherData().name}}</h4>
+        </span>
+    </article>
+    <article>
+        <div>
+            <span>
+                <i class="fa-solid fa-temperature-low"></i>
+                <h4>Min Temp</h4>
+                <h3>{{currentWeatherData().main.temp_min + ' &deg;C'}}</h3>
+            </span>
+            <span>
+                <i class="fa-solid fa-temperature-high"></i>
+                <h4>Max Temp</h4>
+                <h3>{{currentWeatherData().main.temp_max + ' &deg;C'}}</h3>
+            </span>
+        </div>
+        <div>
+            <span>
+                <i class="fa-solid fa-temperature-full"></i>
+                <h4>Feels like</h4>
+            </span>
+            <h3>{{currentWeatherData().main.feels_like + ' &deg;C'}}</h3>
+        </div>
+        <div>
+            <span>
+                <i class="fa-solid fa-droplet"></i>
+                <h4>Humidity</h4>
+            </span>
+            <h3>{{currentWeatherData().main.humidity + ' %'}}</h3>
+        </div>
+        <div>
+            <span>
+                <i class="fa-solid fa-wind"></i>
+                <h4>Wind</h4>
+            </span>
+            <h3>{{currentWeatherData().wind.speed + ' m/sec'}}</h3>
+        </div>
+        <div>
+            <span>
+                <i class="fa-solid fa-cloud"></i>
+                <h4>AirPressure</h4>
+            </span>
+            <h3>{{currentWeatherData().main.pressure + ' hPa'}}</h3>
+        </div>
+        <div>
+            <span>
+                <i class="fa-solid fa-eye"></i>
+                <h4>Visibility</h4>
+            </span>
+            <h3>{{currentWeatherData().visibility + ' m'}}</h3>
+        </div>
+    </article>
+</section>

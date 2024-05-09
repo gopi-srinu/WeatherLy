@@ -1,0 +1,90 @@
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @keyframes rotateClockwise {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    svg{
+        animation: rotateClockwise 4s linear infinite;
+        animation-delay: 1s;
+    }
+    article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        h1{
+            font-size: 10rem;
+            font-weight: 700;
+        }
+
+        p{
+            font-weight: 600;
+            font-size: 2.6rem;
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    section{
+        width: 100%;
+        height: 100%;
+        article{
+            h1{
+                font-size: 7rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    section{
+        width: 100%;
+        height: 100%;
+        article{
+            h1{
+                font-size: 6rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    section{
+        width: 100%;
+        height: 100%;
+        article{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            h1{
+                font-size: 4.6rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

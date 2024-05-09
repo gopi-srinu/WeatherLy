@@ -1,0 +1,7 @@
+{
+  "name": "weatherly",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
