@@ -5,7 +5,6 @@ Real-time Weather Data: Weatherly fetches real-time weather data from the OpenWe
 Forecast: Users can view detailed forecasts to plan their activities accordingly.
 Responsive Design: The project is built using Angular and incorporates responsive design principles, making it accessible across various devices and screen sizes.
 User-Friendly Interface: Weatherly offers an intuitive and easy-to-use interface, allowing users to quickly access the information they need.
-Customization: Users can customize their experience by selecting locations and preferences to tailor the displayed weather data.
 
 Technologies Used :-
 Angular: A popular framework for building single-page web applications.
