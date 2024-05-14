@@ -1,4 +1,3 @@
-Weatherly
 Weatherly is a weather dashboard project designed to provide real-time weather data, forecasts, and updates using the OpenWeather API. Built with Angular, Weatherly offers a responsive and user-friendly interface to stay informed about weather conditions worldwide.
 
 Features :-
