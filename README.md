@@ -35,4 +35,5 @@ Run the Application
 ## Tech Stack
 
 **Client:** Angular, SCSS, Typescript
+
 **Server:** OpenWeatherMap API
