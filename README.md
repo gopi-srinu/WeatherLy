@@ -1,24 +1,38 @@
-Weatherly is a weather dashboard project designed to provide real-time weather data, forecasts, and updates using the OpenWeather API. Built with Angular, Weatherly offers a responsive and user-friendly interface to stay informed about weather conditions worldwide.
 
-Features :-
-Real-time Weather Data: Weatherly fetches real-time weather data from the OpenWeather API, ensuring accurate and up-to-date information.
-Forecast: Users can view detailed forecasts to plan their activities accordingly.
-Responsive Design: The project is built using Angular and incorporates responsive design principles, making it accessible across various devices and screen sizes.
-User-Friendly Interface: Weatherly offers an intuitive and easy-to-use interface, allowing users to quickly access the information they need.
+# WeatherLy - Weather Dashboard application
 
-Technologies Used :-
-Angular: A popular framework for building single-page web applications.
-OpenWeather API: Provides access to weather data, forecasts, and historical weather information.
-HTML/CSS/JavaScript: Core web technologies used for building the frontend interface and functionality.
-Responsive Design: Implemented using CSS media queries and flexible layouts to ensure compatibility across devices.
+Weatherly is a dashboard project that uses the OpenWeather API to give real-time weather data, forecasts, and updates. Weatherly, built with Angular, provides a responsive and user-friendly interface for staying up to date on weather conditions across the world.
 
-Getting Started
-To get started with Weatherly, follow these steps:
 
-Clone the Repository: Clone the Weatherly repository to your local machine using the following command:
+## Features
 
-1 . git clone <repository_URL>
-2. npm install
-3.Set Up API Key: Sign up for an API key from OpenWeather and replace the
-placeholder API key in the project configuration with your own.
-4.Run the Application: Start the development server by running:
+- Real-Time Weather Data: Weatherly obtains real-time weather data from the OpenWeather API, ensuring that the information is reliable and up to date.
+- Forecast: Users can see precise forecasts and organize their activities accordingly.
+- Responsive Design: The project is designed with Angular and employs responsive design principles, making it accessible on a variety of devices and screen sizes.
+- User-Friendly Interface: Weatherly provides an intuitive and simple interface that allows users to rapidly obtain the information they require.
+
+
+## Installation
+
+Clone the repository
+
+```bash
+  git clone https://github.com/gopi-srinu/WeatherLy.git
+```
+Navigate to the project directory
+```bash
+  cd WeatherLy
+```
+Install the Dependencies
+```bash
+  npm Install
+```
+Run the Application
+```bash
+  ng serve
+```
+
+## Tech Stack
+
+**Client:** Angular, SCSS, Typescript
+**Server:** OpenWeatherMap API
